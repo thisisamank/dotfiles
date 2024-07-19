@@ -97,7 +97,7 @@ sync_everything(){
   git add .
   git commit -m "Sync: Date $(date)"
   git push
-  echo "Synced everything..."
+  echo "\n\nSynced everything..."
   cd "$current"
 }
 
