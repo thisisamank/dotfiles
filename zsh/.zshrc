@@ -91,6 +91,11 @@ sync_dotfiles(){
   git add .
   git commit -m "Sync: Date $(date)"
   git push
+  cd ~/brain
+  git add .
+  git commit -m "Sync: Date $(date)"
+  git push
+  
 }
 
 # ========================================
