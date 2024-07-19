@@ -35,7 +35,6 @@ ZSH_THEME="spaceship"
 plugins=(
     git
     zsh-autosuggestions
-    zsh-core
 )
 
 source $ZSH/oh-my-zsh.sh
