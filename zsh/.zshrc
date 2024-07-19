@@ -39,8 +39,6 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-
-
 # ========================================
 #                 Completion
 # ========================================
@@ -88,7 +86,7 @@ clear_command_line() {
 
 sync_everything(){
   current=$(pwd)
-  echo "\n\nSyncing everything..\n."
+  echo "\n\nSyncing everything..\n"
   cd ~/dotfiles
   git add .
   git commit -m "Sync: Date $(date)"
