@@ -88,7 +88,7 @@ clear_command_line() {
 
 sync_everything(){
   current=$(pwd)
-  echo "\n\nSyncing everything..."
+  echo "\n\nSyncing everything..\n."
   cd ~/dotfiles
   git add .
   git commit -m "Sync: Date $(date)"
@@ -97,7 +97,7 @@ sync_everything(){
   git add .
   git commit -m "Sync: Date $(date)"
   git push
-  echo "\n\nSynced everything..."
+  echo "Synced everything..."
   cd "$current"
 }
 
