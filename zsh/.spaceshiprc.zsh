@@ -1,7 +1,5 @@
-SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ORDER=(
   time          # Time stampe
-  user          # Username
   host          # Hostname
   dir           # Current directory
   git           # Git repository details
