@@ -35,6 +35,7 @@ ZSH_THEME="spaceship"
 plugins=(
     git
     zsh-autosuggestions
+    zsh-core
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -86,11 +87,19 @@ clear_command_line() {
   zle reset-prompt
 }
 
+sync_dotfiles(){
+  git add .
+  git commit -m "Sync: Date $(date)"
+  git push
+}
+
 # ========================================
 #                 Key Bindings
 # ========================================
 
+zle -N sync_dotfiles
 zle -N clear_command_line
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey '^K' clear_command_line
+bindkey '^S' sync_dotfiles
