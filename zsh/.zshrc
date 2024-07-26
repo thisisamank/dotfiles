@@ -74,6 +74,7 @@ alias gitc="git commit -m"
 alias gitp="git push"
 alias gitpl="git pull"
 alias ghclone="gh repo clone"
+alias wtmux= "sh ~/.tmux/work.sh"
 
 # ========================================
 #                 Functions
@@ -82,6 +83,10 @@ alias ghclone="gh repo clone"
 clear_command_line() {
   zle kill-whole-line
   zle reset-prompt
+}
+
+reload_zshrc() {
+  source ~/.zshrc
 }
 
 sync_everything(){
@@ -105,7 +110,9 @@ sync_everything(){
 
 zle -N sync_everything
 zle -N clear_command_line
+zle -N reload_zshrc
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 bindkey '^K' clear_command_line
 bindkey '^S' sync_everything
+bindkey '^R' reload_zshrc
