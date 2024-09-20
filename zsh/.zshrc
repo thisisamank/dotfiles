@@ -3,9 +3,10 @@
 #         Paths and Environment
 # ========================================
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export KUBECONFIG=/Users/thisisamank/.kube/dyte_k8s.conf:/Users/thisisamank/.kube/config
 export LDFLAGS="-L/opt/homebrew/opt/ruby@2.7/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby@2.7/include"
-export PATH=/Users/thisisamank/Library/Python/3.9/bin:opt/homebrew/opt/ruby@2.7/bin:/opt/homebrew/lib/ruby/gems/2.7.0/bin:$PATH
+export PATH=/opt/homebrew/opt/ruby@2.7/bin:/opt/homebrew/lib/ruby/gems/2.7.0/bin:$PATH
 export PATH=/opt/homebrew/lib/ruby/gems/2.7.0/bin/pod:$PATH
 export PATH=/Users/thisisamank/apache-maven-3.9.0/bin:$PATH
 export ANDROID_HOME=/Users/$USER/Library/Android/sdk
@@ -21,7 +22,9 @@ export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # ========================================
 #                 Themes
@@ -116,3 +119,9 @@ bindkey "^E" end-of-line
 bindkey '^K' clear_command_line
 bindkey '^S' sync_everything
 bindkey '^R' reload_zshrc
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/thisisamank/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/thisisamank/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/thisisamank/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/thisisamank/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
