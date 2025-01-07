@@ -22,9 +22,19 @@ export PATH="/opt/homebrew/opt/mongodb-community@5.0/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PATH="$HOME/.pyenv/bin:$PATH"
+export AWS_PROFILE=default
+eval "$(direnv hook zsh)"
+export GOPATH=/opt/homebrew/bin/go
+export PATH=~/go/bin:$PATH
+# ========================================
+#                 Pyenv
+# ========================================
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+
 
 # ========================================
 #                 Themes
@@ -69,6 +79,7 @@ zicompinit
 #                 Aliases
 # ========================================
 
+alias air='~/go/bin/air'
 alias arc="~/arc.sh"
 alias gito="~/git-open.sh"
 alias gitic="git init && git commit -m 'Initial commit' --allow-empty"
@@ -78,6 +89,7 @@ alias gitp="git push"
 alias gitpl="git pull"
 alias ghclone="gh repo clone"
 alias wtmux= "sh ~/.tmux/work.sh"
+alias lzd='lazydocker'
 
 # ========================================
 #                 Functions
