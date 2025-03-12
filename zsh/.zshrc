@@ -30,13 +30,7 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # Flutter and Dart configuration
 export PATH="$PATH:/Users/thisisamank/fvm/default/bin:"
-export PATH="$PATH:$HOME/.pub-cache/bin"
-
-# ollama
-export OLLAMA_HOST="http://localhost:11434"
-
-
-# Locale settings
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
@@ -117,6 +111,7 @@ alias air='~/go/bin/air'
 alias arc="~/arc.sh"
 alias gito="~/git-open.sh"
 alias gitic="git init && git commit -m 'Initial commit' --allow-empty"
+alias gcom="git checkout main"
 alias giti="git init"
 alias gitc="git commit -m"
 alias gitp="git push"
