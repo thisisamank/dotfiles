@@ -79,6 +79,7 @@ if [ "$IS_MAC" = true ]; then
     echo "🍎 Installing macOS Configs..."
     link_file "$DOTFILES_DIR/mac/yabairc" "$HOME/.yabairc"
     link_file "$DOTFILES_DIR/mac/skhdrc" "$HOME/.skhdrc"
+    link_file "$DOTFILES_DIR/mac/sketchybar" "$HOME/.config/sketchybar"
     link_file "$DOTFILES_DIR/common/ghostty/config" "$HOME/.config/ghostty/config"
 fi
 

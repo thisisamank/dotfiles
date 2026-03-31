@@ -5,7 +5,7 @@ This setup is optimized for high-performance developer workflows, specifically f
 ## 🛠 Dotfiles Management
 Your configurations are now organized in `~/dotfiles` and are cross-platform (Linux & Mac).
 - **Update/Install:** Run `~/dotfiles/install.sh` to refresh symlinks.
-- **Mac Support:** The same repository works on macOS with **Ghostty**, **Yabai**, and **SKHD**.
+- **Mac Support:** The same repository works on macOS with **Ghostty**, **Yabai**, **SKHD**, and **Sketchybar**.
 
 ## 🚀 Core Components
 - **Window Manager:** i3-gaps (Layout, Tiling, Workspaces)
