@@ -1,0 +1,32 @@
+# Ghostty Tokyonight SRE Config
+font-family = "JetBrains Mono"
+font-size = 14
+theme = tokyonight
+background-opacity = 0.90
+window-padding-x = 15
+window-padding-y = 15
+confirm-close-surface = false
+mouse-hide-while-typing = true
+
+# Custom Tokyonight Palette (if theme not built-in)
+palette = 0=#011628
+palette = 1=#f7768e
+palette = 2=#9ece6a
+palette = 3=#e0af68
+palette = 4=#7aa2f7
+palette = 5=#bb9af7
+palette = 6=#7dcfff
+palette = 7=#CBE0F0
+palette = 8=#414868
+palette = 9=#f7768e
+palette = 10=#9ece6a
+palette = 11=#e0af68
+palette = 12=#7aa2f7
+palette = 13=#bb9af7
+palette = 14=#7dcfff
+palette = 15=#ffffff
+background = #011628
+foreground = #CBE0F0
+selection-background = #143652
+selection-foreground = #CBE0F0
+cursor-color = #CBE0F0

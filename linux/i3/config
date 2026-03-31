@@ -1,0 +1,128 @@
+# i3 config file (v4)
+# Optimized for DevOps/SRE Workflow with Tokyonight Theme
+
+# Modifier: Alt Key
+set $mod Mod1
+
+# Font for window titles
+font pango:JetBrains Mono 14
+
+# Invert scroll direction (swap buttons 4 and 5)
+exec --no-startup-id xmodmap -e "pointer = 1 2 3 5 4 6 7 8 9 10 11 12"
+
+# Tokyonight Colors
+set $bg           #011628
+set $bg_dark      #011423
+set $bg_highlight #143652
+set $fg           #CBE0F0
+set $fg_dark      #B4D0E9
+set $border       #547998
+set $red          #f7768e
+set $green        #9ece6a
+set $yellow       #e0af68
+set $blue         #7aa2f7
+set $magenta      #bb9af7
+set $cyan         #7dcfff
+
+# Window decorations
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="org.mozilla.firefox"] border pixel 0
+for_window [class="dev.zed.Zed"] border pixel 0
+
+# Window decorations (Border, Background, Text, Indicator, Child Border)
+client.focused          $border       $border       $fg           $border       $border
+client.focused_inactive $bg_dark      $bg_dark      $fg_dark      $bg_dark      $bg_dark
+client.unfocused        $bg_dark      $bg_dark      $fg_dark      $bg_dark      $bg_dark
+client.urgent           $red          $red          $fg           $red          $red
+client.placeholder      $bg_dark      $bg_dark      $fg           $bg_dark      $bg_dark
+client.background       $bg
+
+# Gaps
+gaps inner 10
+gaps outer 5
+smart_gaps on
+smart_borders on
+
+# Use Mouse+Mod4 to drag floating windows
+floating_modifier $mod
+
+# Workspaces
+set $ws1 "1: Term"
+set $ws2 "2: Web"
+set $ws3 "3: Code"
+set $ws4 "4: Ops"
+set $ws5 "5: Chat"
+
+# Switch to workspace
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+
+# Move focused container to workspace
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+
+# Keybindings - Core
+bindsym $mod+Return exec alacritty
+bindsym $mod+d exec "rofi -show drun -theme /home/thisisamank/.config/rofi/tokyonight.rasi"
+bindsym $mod+c exec /home/thisisamank/.local/bin/zed
+bindsym $mod+Shift+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+Shift+s exec flameshot gui
+
+# DevOps/SRE Quick Tools
+bindsym $mod+t exec alacritty -e htop
+bindsym $mod+g exec alacritty -e lazygit
+bindsym $mod+Shift+d exec alacritty -e lazydocker
+
+# Navigation (Vim-style)
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Move windows (Vim-style)
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Split orientation
+bindsym $mod+v split h
+bindsym $mod+b split v
+
+# Layout management
+bindsym $mod+e layout toggle split
+bindsym $mod+w layout tabbed
+bindsym $mod+s layout stacking
+
+# Scratchpad
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# System controls
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit i3?' -B 'Yes' 'i3-msg exit'"
+
+# Workspace assignments (DevOps/SRE focus)
+assign [class="Firefox"] $ws2
+assign [class="Google-chrome"] $ws2
+assign [class="Code"] $ws3
+assign [class="zed"] $ws3
+assign [class="Slack"] $ws5
+assign [class="discord"] $ws5
+
+# Autostart
+exec --no-startup-id picom -b
+exec --no-startup-id polybar main &
+exec --no-startup-id nm-applet
+exec --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/zen-focus.jpg

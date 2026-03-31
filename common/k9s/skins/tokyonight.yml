@@ -1,0 +1,70 @@
+# Tokyonight skin for K9s
+k9s:
+  body:
+    fgColor: "#CBE0F0"
+    bgColor: "#011628"
+    logoColor: "#7aa2f7"
+  prompt:
+    fgColor: "#CBE0F0"
+    bgColor: "#011628"
+    suggestColor: "#7aa2f7"
+  info:
+    fgColor: "#bb9af7"
+    sectionColor: "#CBE0F0"
+  dialog:
+    fgColor: "#CBE0F0"
+    bgColor: "#011628"
+    buttonFgColor: "#CBE0F0"
+    buttonBgColor: "#7aa2f7"
+    buttonFocusFgColor: "#ffffff"
+    buttonFocusBgColor: "#bb9af7"
+    labelFgColor: "#e0af68"
+    fieldFgColor: "#CBE0F0"
+  frame:
+    border:
+      fgColor: "#547998"
+      focusColor: "#7aa2f7"
+    menu:
+      fgColor: "#CBE0F0"
+      keyColor: "#7aa2f7"
+      numKeyColor: "#7aa2f7"
+    crumbs:
+      fgColor: "#011628"
+      bgColor: "#7aa2f7"
+      activeColor: "#ffffff"
+    status:
+      newColor: "#9ece6a"
+      modifyColor: "#7aa2f7"
+      addColor: "#7dcfff"
+      errorColor: "#f7768e"
+      pendingColor: "#e0af68"
+      hlColor: "#143652"
+      killColor: "#bb9af7"
+  views:
+    table:
+      fgColor: "#CBE0F0"
+      bgColor: "#011628"
+      cursorFgColor: "#011628"
+      cursorBgColor: "#7aa2f7"
+      markColor: "#e0af68"
+      header:
+        fgColor: "#7aa2f7"
+        bgColor: "#011628"
+        sorterColor: "#cyan"
+    xray:
+      fgColor: "#CBE0F0"
+      bgColor: "#011628"
+      cursorColor: "#143652"
+      graphicColor: "#7aa2f7"
+      showHeaders: true
+    charts:
+      bgColor: "#011628"
+      chartBgColor: "#011628"
+      dialBgColor: "#011628"
+      chartColor: "#7aa2f7"
+    logs:
+      fgColor: "#CBE0F0"
+      bgColor: "#011628"
+      indicator:
+        fgColor: "#7aa2f7"
+        bgColor: "#011628"

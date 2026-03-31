@@ -1,0 +1,151 @@
+:root {
+  --bg-color: #011628;
+  --bg-dark-color: #011423;
+  --fg-color: #CBE0F0;
+  --accent-color: #7aa2f7;
+  --highlight-color: #143652;
+  --tab-inactive-color: #627E97;
+  
+  /* Force dark theme variables for URL bar */
+  --toolbar-field-background-color: var(--bg-dark-color) !important;
+  --toolbar-field-color: var(--fg-color) !important;
+  --toolbar-field-focus-background-color: var(--bg-dark-color) !important;
+  --toolbar-field-focus-color: var(--fg-color) !important;
+  --toolbar-field-border-color: var(--highlight-color) !important;
+  
+  /* Additional overrides for unselected text */
+  --lwt-toolbar-field-color: var(--fg-color) !important;
+  --lwt-toolbar-field-background-color: var(--bg-dark-color) !important;
+}
+
+/* Hide window controls (close/min/max) - i3 handles this */
+.titlebar-buttonbox-container {
+  display: none !important;
+}
+
+/* Tab bar cleanup */
+#TabsToolbar {
+  background-color: var(--bg-dark-color) !important;
+}
+
+#alltabs-button,
+#firefox-view-button {
+  display: none !important;
+}
+
+#tabs-newtab-button {
+  fill: var(--accent-color) !important;
+}
+
+.tab-background {
+  background-color: var(--bg-dark-color) !important;
+  border-radius: 0 !important;
+  margin-block: 0 !important;
+  border: none !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: var(--bg-color) !important;
+  border-top: 2px solid var(--accent-color) !important;
+}
+
+.tab-content {
+  color: var(--tab-inactive-color) !important;
+  font-size: 11px !important;
+  font-family: "JetBrains Mono" !important;
+}
+
+.tab-content[selected="true"] {
+  color: var(--fg-color) !important;
+}
+
+/* Minimal Nav bar */
+#nav-bar {
+  background-color: var(--bg-color) !important;
+  box-shadow: none !important;
+  margin-top: -1px !important;
+  padding-block: 2px !important;
+}
+
+/* Hide extra clutter in URL bar */
+#back-button, #forward-button, #reload-button, #stop-button, #home-button {
+  display: none !important;
+}
+
+/* Aggressive URL Bar Styling */
+#urlbar, #urlbar-background, #urlbar-input-container {
+  background-color: var(--bg-dark-color) !important;
+  background: var(--bg-dark-color) !important;
+  color: var(--fg-color) !important;
+  border-color: var(--highlight-color) !important;
+}
+
+#urlbar-background {
+  border: 1px solid var(--highlight-color) !important;
+  border-radius: 4px !important;
+}
+
+#urlbar-input {
+  color: var(--fg-color) !important;
+  font-family: "JetBrains Mono" !important;
+  font-size: 12px !important;
+  caret-color: var(--accent-color) !important;
+}
+
+#urlbar-input::placeholder {
+  color: var(--tab-inactive-color) !important;
+  opacity: 0.7 !important;
+}
+
+#urlbar-input::selection {
+  background-color: var(--highlight-color) !important;
+  color: var(--fg-color) !important;
+}
+
+/* Force text color for all states */
+#urlbar-input, .urlbar-input, #urlbar-scheme, #urlbar-host {
+  color: var(--fg-color) !important;
+  fill: var(--fg-color) !important;
+}
+
+/* Fix URL bar results and focus colors */
+.urlbarView {
+  background-color: var(--bg-dark-color) !important;
+  color: var(--fg-color) !important;
+  border: 1px solid var(--highlight-color) !important;
+  border-top: none !important;
+}
+
+.urlbarView-row[selected] {
+  background-color: var(--highlight-color) !important;
+}
+
+.urlbarView-url, .urlbarView-title {
+  color: var(--fg-color) !important;
+}
+
+.urlbarView-row:hover {
+  background-color: var(--highlight-color) !important;
+}
+
+#tracking-protection-icon-container,
+#page-action-buttons,
+#identity-box {
+  display: none !important;
+}
+
+/* Personal toolbar (bookmarks bar) */
+#PersonalToolbar {
+  background-color: var(--bg-color) !important;
+  color: var(--fg-color) !important;
+}
+
+/* Remove bulk from sidebar if used */
+#sidebar-header {
+  display: none !important;
+}
+
+/* Remove bottom border bulk */
+#navigator-toolbox {
+  border-bottom: 1px solid var(--bg-dark-color) !important;
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Tokyo Night",
+  "author": "Opencode",
+  "themes": [
+    {
+      "name": "Tokyo Night",
+      "appearance": "dark",
+      "style": {
+        "background": "#011628",
+        "foreground": "#CBE0F0",
+        "border": "#547998",
+        "selection": "#275378",
+        "status_bar.background": "#011423",
+        "status_bar.foreground": "#B4D0E9",
+        "title_bar.background": "#011423",
+        "title_bar.foreground": "#B4D0E9",
+        "tab_bar.background": "#011423",
+        "tab.active_background": "#011628",
+        "tab.active_foreground": "#CBE0F0",
+        "tab.inactive_background": "#011423",
+        "tab.inactive_foreground": "#627E97",
+        "editor.background": "#011628",
+        "editor.foreground": "#CBE0F0",
+        "editor.gutter.background": "#011628",
+        "editor.gutter.foreground": "#627E97",
+        "editor.line_number.foreground": "#627E97",
+        "editor.line_number.active_foreground": "#CBE0F0",
+        "editor.selection.background": "#275378",
+        "syntax": {
+          "comment": { "color": "#627E97" },
+          "keyword": { "color": "#bb9af7" },
+          "function": { "color": "#7aa2f7" },
+          "string": { "color": "#9ece6a" },
+          "number": { "color": "#ff9e64" },
+          "type": { "color": "#2ac3de" },
+          "operator": { "color": "#89ddff" },
+          "property": { "color": "#7dcfff" },
+          "variable": { "color": "#CBE0F0" }
+        }
+      }
+    }
+  ]
+}

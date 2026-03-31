@@ -1,0 +1,38 @@
+@-moz-document url(about:newtab), url(about:home) {
+  :root {
+    --newtab-background-color: #011628 !important;
+    --newtab-text-primary-color: #CBE0F0 !important;
+    --newtab-text-secondary-color: #627E97 !important;
+    --newtab-wordmark-color: #7aa2f7 !important;
+  }
+  
+  body {
+    background-color: #011628 !important;
+  }
+  
+  .top-site-outer .title {
+    color: #CBE0F0 !important;
+  }
+  
+  .section-title {
+    color: #bb9af7 !important;
+  }
+  
+  .card-outer {
+    background-color: #143652 !important;
+    border-radius: 8px !important;
+  }
+}
+
+/* Minimal Scrollbars */
+* {
+  scrollbar-width: thin !important;
+  scrollbar-color: #143652 #011628 !important;
+}
+
+/* Completely hide scrollbars if you prefer total zen */
+/* 
+:root {
+  scrollbar-width: none !important;
+}
+*/
